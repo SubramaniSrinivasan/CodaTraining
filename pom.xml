@@ -195,6 +195,11 @@
 	    <artifactId>hibernate-core</artifactId>
 	    <version>5.4.28.Final</version>
 	</dependency>
+	<dependency>
+	    <groupId>com.itextpdf</groupId>
+	    <artifactId>itextpdf</artifactId>
+	    <version>5.5.13.1</version>
+	</dependency>
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>

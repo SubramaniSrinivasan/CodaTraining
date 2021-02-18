@@ -26,16 +26,9 @@ public class ExcelGenerator {
 			
 			HashMap<String, String> excelMap = new HashMap<String, String>();
 			List<String> itemList = invoiceTxnDAO.getAllItems(billNo);
+			
 			Integer totalPrice = 0;
-			
-			System.out.println("Testing");
-			System.out.println(billDTO);
-			for(String s : itemList) {
-				System.out.println(s);
-			}
-			System.out.println("Testing Over");
-			
-			
+		
 			excelMap.put("Bill No", billDTO.getBillNo().toString());
 			excelMap.put("Bill Date", billDTO.getDate().toString());
 			excelMap.put("User Id", String.valueOf(userDTO.getUid()));

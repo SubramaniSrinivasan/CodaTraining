@@ -93,8 +93,9 @@ public class InvoiceTxnDAOImpl extends InvoiceTxnDAO {
 //		return null;
 		
 		Session session = HibernateUtility.getSession();
-		String hql = "SELECT i.ItemID FROM InvoiceTxnDTO i";
+		String hql = "SELECT i.ItemID FROM InvoiceTxnDTO i  where billno= :billNo";
 		Query query = session.createQuery(hql);
+		query.setParameter("billNo", billNo);
 		List<String> i = query.list();
 //		
 //		for(BillDTO invoice : invoiceList) {

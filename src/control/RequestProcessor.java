@@ -20,7 +20,6 @@ public class RequestProcessor implements Cloneable {
 			Action action = (Action)Class.forName(actionClass).getDeclaredConstructor().newInstance();
 			String result = action.execute(request, response);
 			String nextPage = prop.getProperty(result);
-			System.out.println("Next Page : " + nextPage);
 			if(nextPage != null && !nextPage.equals("download.success")) {
 				RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 				rd.forward(request, response);
